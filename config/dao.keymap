@@ -33,11 +33,11 @@
             //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-            &kp ESC     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8      &kp N9  &kp N0      &kp MINUS
+            &kp ESC     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8      &kp N9  &kp N0      &kp BSPC
 &kp LWIN    &kp GRAVE   &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I       &kp O   &kp P       &kp LBKT    &mt RWIN RBKT
             &kp LCTRL   &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K       &kp L   &kp SEMI    &mt RCTRL SQT
             &kp LALT    &kp Z   &kp X   &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    &mt RALT BSLH
-            &lt LSHFT SPACE     &mt RSE TAB     &lt LWR RET     &lt LWR RET     &mt RSE BSPC        &lt RSHIFT DEL
+            &lt RSE TAB         &mt LSHFT RET   &lt LWR SPACE   &lt LWR SPACE   &mt LSHFT RET       &lt RSE DEL
             >;
         };
 
@@ -53,7 +53,7 @@
 &trans  &trans  &trans  &kp END         &kp UP      &kp HOME        &trans          &trans      &kp HOME    &kp UP      &kp END     &trans  &trans  &trans
         &trans  &trans  &kp LEFT        &kp DOWN    &kp RIGHT       &kp C_BRI_DN    &kp EQUAL   &kp LEFT    &kp DOWN    &kp RIGHT   &trans  &trans
         &trans  &trans  &trans          &trans      &trans          &kp C_BRI_UP    &kp PLUS    &trans      &trans      &trans      &trans  &trans
-        &trans      &lt ADJ TAB     &trans      &trans      &lt ADJ BSPC        &trans
+        &lt ADJ TAB     &trans          &trans      &trans          &trans          &lt ADJ DEL
             >;
         };
 
@@ -69,7 +69,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F12 &trans
         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &lt ADJ RET &lt ADJ RET &trans  &trans
+        &trans  &trans  &lt ADJ SPACE   &lt ADJ SPACE   &trans  &trans
             >;
         };
 
@@ -85,7 +85,7 @@
 &sys_reset  &bootloader &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &bootloader &sys_reset
             &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_SEL 4    &bt BT_SEL 3    &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0    &bt BT_CLR
             &none       &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none
-            &none       &trans          &trans          &trans          &trans          &none
+            &trans      &none           &trans          &trans          &none           &trans
             >;
         };
     };
