@@ -22,6 +22,10 @@
     quick_tap_ms = <200>;
 };
 
+&mmv {
+    time-to-max-speed-ms = <500>;
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
