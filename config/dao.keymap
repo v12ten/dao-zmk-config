@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define DEF 0
 #define LWR 1
@@ -65,9 +66,9 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-        &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F12 &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &kp F1  &kp F2          &kp F3          &kp F4          &kp F5  &kp F6  &kp F7          &kp F8          &kp F9          &kp F10 &kp F11
+&trans  &trans  &trans  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK       &trans  &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK       &trans  &kp F12 &trans
+        &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &lt ADJ SPACE   &lt ADJ SPACE   &trans  &trans
             >;
