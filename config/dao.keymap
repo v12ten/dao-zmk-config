@@ -9,11 +9,17 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
 
-#define U_MOUSE_MOVE_MAX 1400 // default 600
-#define FAST_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
-#define FAST_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
-#define FAST_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
-#define FAST_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
+#define FAST_MOUSE_MOVE 1600 // default 600
+#define FAST_UP MOVE_VERT(-FAST_MOUSE_MOVE)
+#define FAST_DOWN MOVE_VERT(FAST_MOUSE_MOVE)
+#define FAST_LEFT MOVE_HOR(-FAST_MOUSE_MOVE)
+#define FAST_RIGHT MOVE_HOR(FAST_MOUSE_MOVE)
+
+#define SLOW_MOUSE_MOVE 400 // default 600
+#define SLOW_UP MOVE_VERT(-SLOW_MOUSE_MOVE)
+#define SLOW_DOWN MOVE_VERT(SLOW_MOUSE_MOVE)
+#define SLOW_LEFT MOVE_HOR(-SLOW_MOUSE_MOVE)
+#define SLOW_RIGHT MOVE_HOR(SLOW_MOUSE_MOVE)
 
 #define DEF 0
 #define LWR 1
@@ -29,8 +35,13 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <500>; // 500 default value
-    acceleration-exponent=<2>;
+    time-to-max-speed-ms = <1000>; // 500 default value
+    acceleration-exponent=<1>;
+};
+
+&mwh {
+    time-to-max-speed-ms = <1000>; // 500 default value
+    acceleration-exponent=<1>;
 };
 
 / {
@@ -78,8 +89,8 @@
 
             bindings = <
         &trans  &kp F1  &kp F2          &kp F3          &kp F4          &kp F5  &kp F6  &kp F7          &kp F8          &kp F9          &kp F10 &kp F11
-&trans  &trans  &trans  &mkp RCLK       &mmv FAST_UP    &mkp LCLK       &trans  &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK       &trans  &kp F12 &trans
-        &trans  &trans  &mmv FAST_LEFT  &mmv FAST_DOWN  &mmv FAST_RIGHT &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans  &trans
+&trans  &trans  &trans  &mkp RCLK       &mmv FAST_UP    &mkp LCLK       &trans  &trans  &mkp LCLK       &mmv SLOW_UP    &mkp RCLK       &trans  &kp F12 &trans
+        &trans  &trans  &mmv FAST_LEFT  &mmv FAST_DOWN  &mmv FAST_RIGHT &trans  &trans  &mmv SLOW_LEFT  &mmv SLOW_DOWN  &mmv SLOW_RIGHT &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &lt ADJ SPACE   &lt ADJ SPACE   &trans  &trans
             >;
