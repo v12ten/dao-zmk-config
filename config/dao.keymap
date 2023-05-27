@@ -16,10 +16,10 @@
 #define FAST_RIGHT MOVE_HOR(FAST_MOUSE_MOVE)
 
 #define MOUSE_SCRF_MAX 100
-#define SCRF_UP SCROLL_VERT(MOUSE_SCRF_MAX)
-#define SCRF_DOWN SCROLL_VERT(-MOUSE_SCRF_MAX)
-#define SCRF_LEFT SCROLL_HOR(-MOUSE_SCRF_MAX)
-#define SCRF_RIGHT SCROLL_HOR(MOUSE_SCRF_MAX)
+#define SCRL_UP SCROLL_VERT(MOUSE_SCRF_MAX)
+#define SCRL_DOWN SCROLL_VERT(-MOUSE_SCRF_MAX)
+#define SCRL_LEFT SCROLL_HOR(-MOUSE_SCRF_MAX)
+#define SCRL_RIGHT SCROLL_HOR(MOUSE_SCRF_MAX)
 
 #define DEF 0
 #define LWR 1
@@ -62,8 +62,8 @@
 
             bindings = <
         &trans  &trans  &kp C_VOL_DN    &kp C_MUTE  &kp C_VOL_UP    &trans          &trans      &kp C_PREV  &kp C_PP    &kp C_NEXT  &trans  &trans
-&trans  &trans  &trans  &kp PG_DN       &mwh UP     &kp PG_UP       &trans          &trans      &kp HOME    &kp UP      &kp END     &trans  &trans  &trans
-        &trans  &trans  &mwh LEFT       &mwh DOWN   &mwh RIGHT      &kp C_BRI_DN    &kp EQUAL   &kp LEFT    &kp DOWN    &kp RIGHT   &trans  &trans
+&trans  &trans  &trans  &kp PG_DN       &kp UP     &kp PG_UP        &trans          &trans      &kp HOME    &kp UP      &kp END     &trans  &trans  &trans
+        &trans  &trans  &kp LEFT        &kp DOWN   &kp RIGHT        &kp C_BRI_DN    &kp EQUAL   &kp LEFT    &kp DOWN    &kp RIGHT   &trans  &trans
         &trans  &trans  &trans          &trans      &trans          &kp C_BRI_UP    &kp PLUS    &kp MINUS   &trans      &trans      &trans  &trans
         &trans  &trans  &trans          &trans      &trans          &trans
             >;
@@ -73,8 +73,8 @@
 
             bindings = <
         &trans  &kp F1  &kp F2          &kp F3          &kp F4          &kp F5  &kp F6  &kp F7          &kp F8          &kp F9          &kp F10 &kp F11
-&trans  &trans  &trans  &mkp RCLK       &mmv SCRF_UP    &mkp LCLK       &trans  &trans  &mkp LCLK       &mmv FAST_UP    &mkp RCLK       &trans  &kp F12 &trans
-        &trans  &trans  &mmv SCRF_LEFT  &mmv SCRF_DOWN  &mmv SCRF_RIGHT &trans  &trans  &mmv FAST_LEFT  &mmv FAST_DOWN  &mmv FAST_RIGHT &trans  &trans
+&trans  &trans  &trans  &mkp RCLK       &mwh SCRL_UP    &mkp LCLK       &trans  &trans  &mkp LCLK       &mmv FAST_UP    &mkp RCLK       &trans  &kp F12 &trans
+        &trans  &trans  &mwh SCRL_LEFT  &mwh SCRL_DOWN  &mwh SCRL_RIGHT &trans  &trans  &mmv FAST_LEFT  &mmv FAST_DOWN  &mmv FAST_RIGHT &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans          &trans  &trans  &trans
             >;
