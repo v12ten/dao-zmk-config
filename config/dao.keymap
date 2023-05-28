@@ -15,7 +15,7 @@
 #define FAST_LEFT MOVE_HOR(-FAST_MOUSE_MOVE)
 #define FAST_RIGHT MOVE_HOR(FAST_MOUSE_MOVE)
 
-#define MOUSE_SCRF_MAX 100
+#define MOUSE_SCRF_MAX 50
 #define SCRL_UP SCROLL_VERT(MOUSE_SCRF_MAX)
 #define SCRL_DOWN SCROLL_VERT(-MOUSE_SCRF_MAX)
 #define SCRL_LEFT SCROLL_HOR(-MOUSE_SCRF_MAX)
@@ -40,7 +40,7 @@
 
 &mwh {
     time-to-max-speed-ms = <2000>;
-    acceleration-exponent=<1>;
+    acceleration-exponent=<2>;
 };
 
 / {
