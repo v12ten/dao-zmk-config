@@ -3,6 +3,12 @@
 ## Default keymap
 
 
+### Elizabeth (Dao56)
+
+Visual representation of the default keymap in keyboard-layout-editor: [KLE](http://www.keyboard-layout-editor.com/#/gists/c3051eee6ef69a0d3d2996c4a65199e1)
+
+This firmware is based by [this](https://github.com/HolySwitch/dao-zmk-config)
+
 ### Dao44
 
 Visual representation of the default keymap in keyboard-layout-editor: [KLE](http://www.keyboard-layout-editor.com/#/gists/c6ba0634e5b92366be9f324775394e66)
