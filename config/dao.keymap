@@ -50,10 +50,10 @@
 
             bindings = <
             &kp ESC     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8      &kp N9  &kp N0      &kp BSPC
-&kp LWIN    &kp GRAVE   &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I       &kp O   &kp P       &kp LBKT        &mt RWIN RBKT
-            &kp LSHFT   &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K       &kp L   &kp SEMI    &mt RSHFT SQT
-            &kp LCTRL   &kp Z   &kp X   &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    &mt RCTRL BSLH
-            &mt LALT RET        &lt RSE TAB     &lt LWR SPACE   &lt LWR SPACE   &lt RSE TAB &mt RALT RET
+&kp LSHFT   &kp GRAVE   &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I       &kp O   &kp P       &kp LBKT        &mt RSHFT RBKT
+            &kp LCTRL   &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K       &kp L   &kp SEMI    &mt RCTRL SQT
+            &kp LALT    &kp Z   &kp X   &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    &mt RALT BSLH
+            &mt LWIN RET        &lt RSE TAB     &lt LWR SPACE   &lt LWR SPACE   &lt RSE TAB &mt RWIN RET
             >;
         };
 
