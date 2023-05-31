@@ -64,7 +64,7 @@
 &trans  &trans  &trans  &kp PG_DN       &kp UP     &kp PG_UP        &trans          &trans      &kp HOME    &kp UP      &kp END     &trans  &trans  &trans
         &trans  &trans  &kp LEFT        &kp DOWN   &kp RIGHT        &kp C_BRI_UP    &kp PLUS    &kp LEFT    &kp DOWN    &kp RIGHT   &trans  &trans
         &trans  &trans  &trans          &trans      &trans          &kp C_BRI_DN    &kp MINUS   &kp EQUAL   &trans      &trans      &trans  &trans
-        &kp SPACE       &trans          &trans      &trans          &trans          &kp SPACE
+        &trans  &kp SPACE               &trans      &trans          &kp SPACE       &trans
             >;
         };
 
@@ -75,7 +75,7 @@
 &trans  &trans  &trans  &mkp RCLK       &mwh SCRL_UP    &mkp LCLK       &trans  &trans  &mkp LCLK       &mmv FAST_UP    &mkp RCLK       &trans  &kp F12 &trans
         &trans  &trans  &mwh SCRL_LEFT  &mwh SCRL_DOWN  &mwh SCRL_RIGHT &trans  &trans  &mmv FAST_LEFT  &mmv FAST_DOWN  &mmv FAST_RIGHT &trans  &trans
         &trans  &trans  &trans          &trans          &trans          &trans  &trans  &trans          &trans          &trans          &trans  &trans
-        &kp SPACE       &trans          &trans          &trans          &trans  &kp SPACE
+        &trans  &trans  &kp SPACE       &kp SPACE       &trans          &trans
             >;
         };
     };
