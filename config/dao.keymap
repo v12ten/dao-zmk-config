@@ -9,11 +9,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
 
-#define FAST_MOUSE_MOVE 2000
-#define FAST_UP MOVE_VERT(-FAST_MOUSE_MOVE)
-#define FAST_DOWN MOVE_VERT(FAST_MOUSE_MOVE)
-#define FAST_LEFT MOVE_HOR(-FAST_MOUSE_MOVE)
-#define FAST_RIGHT MOVE_HOR(FAST_MOUSE_MOVE)
+#define SLOW_MOUSE_MOVE 2000
+#define S_UP MOVE_VERT(-SLOW_MOUSE_MOVE)
+#define S_DOWN MOVE_VERT(SLOW_MOUSE_MOVE)
+#define S_LEFT MOVE_HOR(-SLOW_MOUSE_MOVE)
+#define S_RIGHT MOVE_HOR(SLOW_MOUSE_MOVE)
 
 #define MOUSE_SCRF_MAX 15
 #define SCRL_UP SCROLL_VERT(MOUSE_SCRF_MAX)
@@ -73,8 +73,8 @@
 
             bindings = <
         &trans  &kp F1  &kp F2          &kp F3          &kp F4          &kp F5  &kp F6  &kp F7          &kp F8          &kp F9          &kp F10 &kp F11
-&trans  &trans  &trans  &mkp RCLK       &mwh SCRL_UP    &mkp LCLK       &trans  &trans  &mkp LCLK       &mmv FAST_UP    &mkp RCLK       &trans  &kp F12 &trans
-        &trans  &trans  &mwh SCRL_LEFT  &mwh SCRL_DOWN  &mwh SCRL_RIGHT &trans  &trans  &mmv FAST_LEFT  &mmv FAST_DOWN  &mmv FAST_RIGHT &trans  &trans
+&trans  &trans  &trans  &mkp RCLK       &mwh SCRL_UP    &mkp LCLK       &trans  &trans  &mkp LCLK       &mmv S_UP       &mkp RCLK       &trans  &kp F12 &trans
+        &trans  &trans  &mwh SCRL_LEFT  &mwh SCRL_DOWN  &mwh SCRL_RIGHT &trans  &trans  &mmv S_LEFT     &mmv S_DOWN     &mmv S_RIGHT    &trans  &trans
         &trans  &trans  &trans          &trans          &trans          &trans  &trans  &trans          &trans          &trans          &trans  &trans
         &trans  &trans  &lt ADJ SPACE   &lt ADJ SPACE   &trans  &trans
             >;
@@ -84,7 +84,7 @@
 
                 bindings = <
             &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none
-&sys_reset  &bootloader     &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &bootloader  &sys_reset
+&reset      &bootloader     &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &bootloader     &reset
             &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_SEL 4    &bt BT_SEL 3    &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0    &bt BT_CLR
             &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none
                             &none           &trans          &trans          &trans          &trans          &none
