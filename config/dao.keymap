@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
 
-#define SLOW_MOUSE_MOVE 2000
+#define SLOW_MOUSE_MOVE 3000
 #define S_UP MOVE_VERT(-SLOW_MOUSE_MOVE)
 #define S_DOWN MOVE_VERT(SLOW_MOUSE_MOVE)
 #define S_LEFT MOVE_HOR(-SLOW_MOUSE_MOVE)
@@ -35,7 +35,7 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <2000>;
+    time-to-max-speed-ms = <3000>;
     acceleration-exponent=<1>;
 };
 
