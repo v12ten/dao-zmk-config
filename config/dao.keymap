@@ -64,8 +64,8 @@
         &trans  &trans  &kp C_VOL_DN    &kp C_MUTE  &kp C_VOL_UP    &trans          &trans      &kp C_PREV  &kp C_PP    &kp C_NEXT  &trans  &kp DEL
 &trans  &trans  &trans  &kp PG_DN       &kp UP      &kp PG_UP       &trans          &trans      &kp HOME    &kp UP      &kp END     &trans  &trans  &trans
         &trans  &trans  &kp LEFT        &kp DOWN    &kp RIGHT       &trans          &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &trans  &trans
-        &trans  &trans  &kp C_BRI_DN    &trans      &kp C_BRI_UP    &kp SPACE       &kp SPACE   &kp MINUS   &kp EQUAL   &kp PLUS    &trans  &trans
-        &trans  &lt ADJ TAB             &trans      &trans          &lt ADJ TAB     &trans
+        &trans  &trans  &kp C_BRI_DN    &trans      &kp C_BRI_UP    &lt ADJ       	&lt ADJ   &kp MINUS   &kp EQUAL   &kp PLUS    &trans  &trans
+		&trans  &trans	&trans	&trans	&trans	&trans
             >;
         };
 
@@ -76,7 +76,7 @@
 &trans  &trans  &trans  &mkp RCLK       &mwh SCRL_UP    &mkp LCLK       &trans  &trans  &mkp LCLK       &mmv S_UP       &mkp RCLK       &trans  &kp F12 &trans
         &trans  &trans  &mwh SCRL_LEFT  &mwh SCRL_DOWN  &mwh SCRL_RIGHT &trans  &trans  &mmv S_LEFT     &mmv S_DOWN     &mmv S_RIGHT    &trans  &trans
         &trans  &trans  &trans          &trans          &trans          &trans  &trans  &trans          &trans          &trans          &trans  &trans
-        &trans  &trans  &lt ADJ SPACE   &lt ADJ SPACE   &trans  &trans
+        &trans  &trans  &kp SPACE	&kp SPACE   &trans  &trans
             >;
         };
 
@@ -86,8 +86,8 @@
             &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none
 &reset      &bootloader     &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &bootloader     &reset
             &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_SEL 4    &bt BT_SEL 3    &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0    &bt BT_CLR
-            &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none
-                            &none           &trans          &trans          &trans          &trans          &none
+            &none           &none           &none           &none           &none           &trans          &trans           &none           &none           &none           &none           &none
+                            &none           &none          &trans          &trans          &none          &none
             >;
         };
     };
