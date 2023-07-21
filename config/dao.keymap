@@ -27,11 +27,11 @@
 #define ADJ 3
 
 &lt {
-    quick_tap_ms = <200>;
+    quick_tap_ms = <150>;
 };
 
 &mt {
-    quick_tap_ms = <200>;
+    quick_tap_ms = <150>;
 };
 
 &mmv {
@@ -65,17 +65,17 @@
 &trans  &trans  &trans  &kp PG_DN       &kp UP      &kp PG_UP       &trans      &trans      &kp HOME    &kp UP      &kp END     &trans  &trans  &trans
         &trans  &trans  &kp LEFT        &kp DOWN    &kp RIGHT       &trans      &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &trans  &trans
         &trans  &trans  &kp C_BRI_DN    &trans      &kp C_BRI_UP    &lt ADJ B		&lt ADJ N		&kp MINUS   &kp EQUAL   &kp PLUS    &trans  &trans
-		&kp SPACE		&trans			&trans		&trans			&trans		&kp SPACE
+		&trans		&trans			&trans		&trans			&trans		&trans
             >;
         };
 
         raise_layer {
 
             bindings = <
-        &trans  &kp F1  &kp F2          &kp F3          &kp F4          &kp F5  &kp F6  &kp F7          &kp F8          &kp F9          &kp F10 &kp F11
-&trans  &trans  &trans  &mkp RCLK       &mwh SCRL_UP    &mkp LCLK       &trans  &trans  &mkp LCLK       &mmv S_UP       &mkp RCLK       &trans  &kp F12 &trans
-        &trans  &trans  &mwh SCRL_LEFT  &mwh SCRL_DOWN  &mwh SCRL_RIGHT &trans  &trans  &mmv S_LEFT     &mmv S_DOWN     &mmv S_RIGHT    &trans  &trans
-        &trans  &trans  &trans          &trans          &trans          &trans  &trans  &trans          &trans          &trans          &trans  &trans
+        &trans  &kp F1  &kp F2          &kp F3          &kp F4          &kp F5  	&kp F6  &kp F7          &kp F8          &kp F9          &kp F10 &kp F11
+&trans  &trans  &trans  &mkp RCLK       &mwh SCRL_UP    &mkp LCLK       &trans  	&trans  &mkp LCLK       &mmv S_UP       &mkp RCLK       &trans  &kp F12 &trans
+        &trans  &trans  &mwh SCRL_LEFT  &mwh SCRL_DOWN  &mwh SCRL_RIGHT &kp SPACE  	&kp SPACE  &mmv S_LEFT     &mmv S_DOWN     &mmv S_RIGHT    &trans  &trans
+        &trans  &trans  &trans          &trans          &trans          &trans  	&trans  &trans          &trans          &trans          &trans  &trans
         &trans  &trans  &trans	&trans	&trans	&trans
             >;
         };
