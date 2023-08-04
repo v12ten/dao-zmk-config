@@ -5,22 +5,20 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 #define SLOW_MOUSE_MOVE 3000
 #define S_UP MOVE_VERT(-SLOW_MOUSE_MOVE)
 #define S_DOWN MOVE_VERT(SLOW_MOUSE_MOVE)
 #define S_LEFT MOVE_HOR(-SLOW_MOUSE_MOVE)
 #define S_RIGHT MOVE_HOR(SLOW_MOUSE_MOVE)
-
 #define MOUSE_SCRF_MAX 15
 #define SCRL_UP SCROLL_VERT(MOUSE_SCRF_MAX)
 #define SCRL_DOWN SCROLL_VERT(-MOUSE_SCRF_MAX)
 #define SCRL_LEFT SCROLL_HOR(-MOUSE_SCRF_MAX)
 #define SCRL_RIGHT SCROLL_HOR(MOUSE_SCRF_MAX)
-
 #define DEF 0
 #define LWR 1
 #define RSE 2
@@ -34,14 +32,13 @@
     quick_tap_ms = <150>;
 };
 
-
 &mmv {
     time-to-max-speed-ms = <1000>;
-    acceleration-exponent=<2>;
+    acceleration-exponent = <2>;
 };
 
 &mwh {
-    acceleration-exponent=<0>;
+    acceleration-exponent = <0>;
 };
 
 / {
@@ -49,46 +46,42 @@
         compatible = "zmk,keymap";
 
         default_layer {
-
-                bindings = <
-            &kp ESC     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8      &kp N9  &kp N0      &kp BSPC
-&kp LSHFT	&kp GRAVE   &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I       &kp O   &kp P       &kp LBKT		&mt RSHFT RBKT
-            &kp LCTRL   &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K       &kp L   &kp SEMI    &mt RCTRL SQT
-            &kp LALT    &kp Z   &kp X   &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    &mt RALT BSLH
-            &mt LWIN TAB		&lt RSE SPACE	&lt LWR RET		&lt LWR RET   	&lt RSE SPACE		&mt RWIN TAB
+            bindings = <
+             &kp ESC  &kp N1  &kp N2         &kp N3        &kp N4       &kp N5         &kp N6        &kp N7         &kp N8   &kp N9    &kp N0       &kp BSPC
+&kp LSHFT  &kp GRAVE   &kp Q   &kp W          &kp E         &kp R        &kp T          &kp Y         &kp U          &kp I    &kp O     &kp P       &kp LBKT  &mt RSHFT RBKT
+           &kp LCTRL   &kp A   &kp S          &kp D         &kp F        &kp G          &kp H         &kp J          &kp K    &kp L  &kp SEMI  &mt RCTRL SQT
+            &kp LWIN   &kp Z   &kp X          &kp C         &kp V        &kp B          &kp N         &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mt RWIN BSLH
+                                      &mt SPACE TAB  &lt RSE LALT  &lt LWR RET    &lt LWR RET  &lt RSE RALT  &mt TAB SPACE
             >;
         };
 
         lower_layer {
-
             bindings = <
-   		&lt ADJ ESC &trans  &kp C_VOL_DN    &kp C_MUTE  &kp C_VOL_UP    &kp N0      &kp PG_UP		&kp C_PREV  &kp C_PP    &kp C_NEXT  &trans  &kp DEL
-&trans	&trans  	&trans  &trans       	&kp N7      &kp N8       	&kp N9      &kp PG_DN 		&kp HOME    &kp UP      &kp END     &trans  &trans  &lt ADJ RSHFT
-  		&trans  	&trans  &trans        	&kp N4    	&kp N5       	&kp N6      &kp C_BRI_UP  	&kp LEFT    &kp DOWN    &kp RIGHT   &trans  &trans
-     	&trans  	&trans  &trans    		&kp N1      &kp N2    		&kp N3		&kp C_BRI_DN	&kp MINUS   &kp EQUAL   &kp PLUS    &trans  &trans
-		&trans		&kp SPACE				&trans		&trans			&kp SPACE	&trans
+        &lt ADJ ESC  &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp N0       &kp PG_UP  &kp C_PREV   &kp C_PP  &kp C_NEXT  &trans  &kp DEL
+&trans       &trans  &trans        &trans      &kp N7        &kp N8  &kp N9       &kp PG_DN    &kp HOME     &kp UP     &kp END  &trans   &trans  &lt ADJ RSHFT
+             &trans  &trans        &trans      &kp N4        &kp N5  &kp N6    &kp C_BRI_UP    &kp LEFT   &kp DOWN   &kp RIGHT  &trans   &trans
+             &trans  &trans        &trans      &kp N1        &kp N2  &kp N3    &kp C_BRI_DN   &kp MINUS  &kp EQUAL    &kp PLUS  &trans   &trans
+                                               &trans     &kp SPACE  &trans          &trans   &kp SPACE     &trans
             >;
         };
 
         raise_layer {
-
             bindings = <
-        &trans  &kp F1  &kp F2          &kp F3          &kp F4          &kp F5  	&kp F6  &kp F7          &kp F8          &kp F9          &kp F10 &kp F11
-&trans  &trans  &trans  &mkp RCLK       &mwh SCRL_UP    &mkp LCLK       &trans  	&trans  &mkp LCLK       &mmv S_UP       &mkp RCLK       &trans  &kp F12 &trans
-        &trans  &trans  &mwh SCRL_LEFT  &mwh SCRL_DOWN  &mwh SCRL_RIGHT &kp SPACE  	&kp SPACE  &mmv S_LEFT     &mmv S_DOWN     &mmv S_RIGHT    &trans  &trans
-        &trans  &trans  &trans          &trans          &trans          &trans  	&trans  &trans          &trans          &trans          &trans  &trans
-        &trans  &trans  &trans	&trans	&trans	&trans
+        &trans  &kp F1          &kp F2          &kp F3           &kp F4     &kp F5       &kp F6       &kp F7       &kp F8        &kp F9  &kp F10  &kp F11
+&trans  &trans  &trans       &mkp RCLK    &mwh SCRL_UP        &mkp LCLK     &trans       &trans    &mkp LCLK    &mmv S_UP     &mkp RCLK   &trans  &kp F12  &trans
+        &trans  &trans  &mwh SCRL_LEFT  &mwh SCRL_DOWN  &mwh SCRL_RIGHT  &kp SPACE    &kp SPACE  &mmv S_LEFT  &mmv S_DOWN  &mmv S_RIGHT   &trans   &trans
+        &trans  &trans          &trans          &trans           &trans     &trans       &trans       &trans       &trans        &trans   &trans   &trans
+                                                &trans           &trans     &trans       &trans       &trans       &trans
             >;
         };
 
         adjust_layer {
-
-                bindings = <
-            &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none
-&reset      &bootloader     &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &bootloader     &reset
-            &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_SEL 4    &bt BT_SEL 3    &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0    &bt BT_CLR
-            &none           &none           &none           &none           &none           &trans          &trans           &none           &none           &none           &none           &none
-                            &none           &none          	&trans          &trans          &none          &none
+            bindings = <
+              &none         &none         &none         &none         &none         &none           &none         &none         &none         &none         &none        &none
+&reset  &bootloader         &none         &none         &none         &none         &none           &none         &none         &none         &none         &none  &bootloader  &reset
+         &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0   &bt BT_CLR
+              &none         &none         &none         &none         &none        &trans          &trans         &none         &none         &none         &none        &none
+                                                        &none         &none        &trans          &trans         &none         &none
             >;
         };
     };
