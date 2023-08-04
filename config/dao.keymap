@@ -55,18 +55,18 @@
 &kp LSHFT	&kp GRAVE   &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I       &kp O   &kp P       &kp LBKT		&mt RSHFT RBKT
             &kp LCTRL   &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K       &kp L   &kp SEMI    &mt RCTRL SQT
             &kp LALT    &kp Z   &kp X   &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    &mt RALT BSLH
-            &mt LWIN SPACE		&lt RSE TAB     &lt LWR RET		&lt LWR RET   	&lt RSE TAB			&mt RWIN SPACE
+            &mt LWIN TAB		&lt RSE SPACE	&lt LWR RET		&lt LWR RET   	&lt RSE SPACE		&mt RWIN TAB
             >;
         };
 
         lower_layer {
 
             bindings = <
-        &trans  &trans  &kp C_VOL_DN    &kp C_MUTE  &kp C_VOL_UP    &trans      &trans      &kp C_PREV  &kp C_PP    &kp C_NEXT  &trans  &kp DEL
-&trans  &trans  &trans  &kp PG_DN       &kp UP      &kp PG_UP       &trans      &trans      &kp HOME    &kp UP      &kp END     &trans  &trans  &trans
-        &trans  &trans  &kp LEFT        &kp DOWN    &kp RIGHT       &trans      &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &trans  &trans
-        &trans  &trans  &kp C_BRI_DN    &trans      &kp C_BRI_UP    &lt ADJ B		&lt ADJ N		&kp MINUS   &kp EQUAL   &kp PLUS    &trans  &trans
-		&trans		&trans			&trans		&trans			&trans		&trans
+   		&lt ADJ ESC &trans  &kp C_VOL_DN    &kp C_MUTE  &kp C_VOL_UP    &trans      &kp PG_UP			&kp C_PREV  &kp C_PP    &kp C_NEXT  &trans  &kp DEL
+&trans	&trans  	&trans  &trans       	&trans      &trans       	&trans      &kp PG_DN 			&kp HOME    &kp UP      &kp END     &trans  &trans  &lt ADJ RSHFT
+  		&trans  	&trans  &trans        	&trans    	&trans       	&trans      &kp C_BRI_UP  	&kp LEFT    &kp DOWN    &kp RIGHT   &trans  &trans
+     	&trans  	&trans  &trans    		&trans      &trans    		&trans		&kp C_BRI_DN	&kp MINUS   &kp EQUAL   &kp PLUS    &trans  &trans
+		&trans		&kp SPACE				&trans		&trans			&kp SPACE	&trans
             >;
         };
 
