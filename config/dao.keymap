@@ -50,8 +50,8 @@
              &kp ESC  &kp N1  &kp N2        &kp N3         &kp N4       &kp N5         &kp N6         &kp N7        &kp N8   &kp N9    &kp N0       &kp BSPC
 &kp LSHFT  &kp GRAVE   &kp Q   &kp W         &kp E          &kp R        &kp T          &kp Y          &kp U         &kp I    &kp O     &kp P       &kp LBKT  &mt RSHFT RBKT
            &kp LCTRL   &kp A   &kp S         &kp D          &kp F        &kp G          &kp H          &kp J         &kp K    &kp L  &kp SEMI  &mt RCTRL SQT
-            &kp LWIN   &kp Z   &kp X         &kp C          &kp V        &kp B          &kp N          &kp M     &kp COMMA  &kp DOT  &kp FSLH  &mt RWIN BSLH
-                                      &mt LALT TAB  &lt RSE SPACE  &lt LWR RET    &lt LWR RET  &lt RSE SPACE  &mt RALT TAB
+            &kp LALT   &kp Z   &kp X         &kp C          &kp V        &kp B          &kp N          &kp M     &kp COMMA  &kp DOT  &kp FSLH  &mt RALT BSLH
+                                      &mt LWIN TAB  &lt RSE SPACE  &lt LWR RET    &lt LWR RET  &lt RSE SPACE  &mt RWIN TAB
             >;
         };
 
