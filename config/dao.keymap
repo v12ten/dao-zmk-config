@@ -42,6 +42,15 @@
 };
 
 / {
+    macros {
+        lang: lang {
+            compatible = "zmk,behavior-macro";
+            label = "LANG";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_SHIFT) &kp LG(SPACE)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -61,7 +70,7 @@
 &trans  &trans  &trans        &kp N7      &kp N8        &kp N9   &kp LC(LEFT)       &kp PG_DN    &kp HOME     &kp UP     &kp END  &trans   &trans  &lt ADJ RSHFT
         &trans  &trans        &kp N4      &kp N5        &kp N6  &kp LC(RIGHT)    &kp C_BRI_UP    &kp LEFT   &kp DOWN   &kp RIGHT  &trans   &trans
         &trans  &trans        &kp N1      &kp N2        &kp N3         &kp N0    &kp C_BRI_DN   &kp MINUS  &kp EQUAL    &kp PLUS  &trans   &trans
-                                          &trans     &kp SPACE         &trans          &trans   &kp SPACE     &trans
+                                           &lang     &kp SPACE         &trans          &trans   &kp SPACE      &lang
             >;
         };
 
