@@ -60,21 +60,21 @@
 
         numbers_layer {
             bindings = <
-        &kp DEL    &trans         &trans  &trans  &trans  &trans    &kp RG(HOME)  &trans              &trans            &trans         &trans         &trans
-&trans  &trans     &trans         &kp N7  &kp N8  &kp N9  &kp N0    &kp PG_UP     &kp HOME            &kp UP            &kp END        &trans         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-        &kp SPACE  &trans         &kp N4  &kp N5  &kp N6  &trans    &kp PG_DN     &kp LEFT            &kp DOWN          &kp RIGHT      &trans         &kp SPACE
-        &trans     &kp LG(SPACE)  &kp N1  &kp N2  &kp N3  &trans    &kp RG(END)   &kp LC(LEFT_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &kp RG(SPACE)  &trans
-                                          &trans  &trans  &trans    &trans        &trans              &trans
+        &trans         &trans  &trans  &trans  &trans  &trans    &kp RG(HOME)  &trans              &trans            &trans         &trans  &kp DELETE
+&trans  &trans         &trans  &kp N7  &kp N8  &kp N9  &kp N0    &kp PG_UP     &kp HOME            &kp UP            &kp END        &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+        &trans         &trans  &kp N4  &kp N5  &kp N6  &trans    &kp PG_DN     &kp LEFT            &kp DOWN          &kp RIGHT      &trans  &trans
+        &kp LG(SPACE)  &trans  &kp N1  &kp N2  &kp N3  &trans    &kp RG(END)   &kp LC(LEFT_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans  &kp RG(SPACE)
+                                       &trans  &trans  &trans    &trans        &trans              &trans
             >;
         };
 
         mouse_layer {
             bindings = <
-        &kp F1      &kp F2  &kp F3          &kp F4          &kp F5           &kp F6    &kp F7  &kp F8       &kp F9       &kp F10       &kp F11  &kp F12
-&trans  &trans      &trans  &mkp RCLK       &mwh SCRL_UP    &mkp LCLK        &trans    &trans  &mkp LCLK    &mmv S_UP    &mkp RCLK     &trans   &trans      &trans
-        &trans      &trans  &mwh SCRL_LEFT  &mwh SCRL_DOWN  &mwh SCRL_RIGHT  &trans    &trans  &mmv S_LEFT  &mmv S_DOWN  &mmv S_RIGHT  &trans   &trans
-        &lt 3 LALT  &trans  &trans          &trans          &trans           &trans    &trans  &trans       &trans       &trans        &trans   &lt 3 RALT
-                                            &trans          &trans           &trans    &trans  &trans       &trans
+        &kp F1      &kp F2  &kp F3          &kp F4          &kp F5           &kp F6       &kp F7     &kp F8       &kp F9       &kp F10       &kp F11  &kp F12
+&trans  &trans      &trans  &mkp RCLK       &mwh SCRL_UP    &mkp LCLK        &trans       &trans     &mkp LCLK    &mmv S_UP    &mkp RCLK     &trans   &trans      &trans
+        &trans      &trans  &mwh SCRL_LEFT  &mwh SCRL_DOWN  &mwh SCRL_RIGHT  &trans       &trans     &mmv S_LEFT  &mmv S_DOWN  &mmv S_RIGHT  &trans   &trans
+        &lt 3 LALT  &trans  &trans          &trans          &trans           &trans       &trans     &trans       &trans       &trans        &trans   &lt 3 RALT
+                                            &trans          &trans           &kp SPACE    &kp SPACE  &trans       &trans
             >;
         };
 
