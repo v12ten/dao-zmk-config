@@ -60,10 +60,10 @@
 
         numbers_layer {
             bindings = <
-        &trans         &trans  &trans  &trans  &trans  &trans    &kp RG(HOME)  &trans              &trans            &trans         &trans  &kp DELETE
+        &kp DELETE     &trans  &trans  &trans  &trans  &trans    &kp RG(HOME)  &trans              &trans            &trans         &trans  &kp DELETE
 &trans  &trans         &trans  &kp N7  &kp N8  &kp N9  &kp N0    &kp PG_UP     &kp HOME            &kp UP            &kp END        &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-        &trans         &trans  &kp N4  &kp N5  &kp N6  &trans    &kp PG_DN     &kp LEFT            &kp DOWN          &kp RIGHT      &trans  &trans
-        &kp LG(SPACE)  &trans  &kp N1  &kp N2  &kp N3  &trans    &kp RG(END)   &kp LC(LEFT_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans  &kp RG(SPACE)
+        &kp LG(SPACE)  &trans  &kp N4  &kp N5  &kp N6  &trans    &kp PG_DN     &kp LEFT            &kp DOWN          &kp RIGHT      &trans  &kp RG(SPACE)
+        &trans         &trans  &kp N1  &kp N2  &kp N3  &trans    &kp RG(END)   &kp LC(LEFT_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans  &trans
                                        &trans  &trans  &trans    &trans        &trans              &trans
             >;
         };
