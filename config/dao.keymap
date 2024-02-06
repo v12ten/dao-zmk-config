@@ -24,9 +24,9 @@
 #define RSE 2
 #define ADJ 3
 
-&lt { quick_tap_ms = <150>; };
+&lt { quick_tap_ms = <200>; };
 
-&mt { quick_tap_ms = <150>; };
+&mt { quick_tap_ms = <200>; };
 
 &mmv {
     time-to-max-speed-ms = <1000>;
