@@ -1,82 +1,68 @@
 /*
- * Copyright (c) 2023 Rafael Yumagulov & Xander Vortex
+ * Copyright (c) 2021 Rafael Yumagulov
  *
  * SPDX-License-Identifier: MIT
  */
 
-#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
-#define SLOW_MOUSE_MOVE 3000
-#define S_UP MOVE_VERT(-SLOW_MOUSE_MOVE)
-#define S_DOWN MOVE_VERT(SLOW_MOUSE_MOVE)
-#define S_LEFT MOVE_HOR(-SLOW_MOUSE_MOVE)
-#define S_RIGHT MOVE_HOR(SLOW_MOUSE_MOVE)
-#define MOUSE_SCRF_MAX 15
-#define SCRL_UP SCROLL_VERT(MOUSE_SCRF_MAX)
-#define SCRL_DOWN SCROLL_VERT(-MOUSE_SCRF_MAX)
-#define SCRL_LEFT SCROLL_HOR(-MOUSE_SCRF_MAX)
-#define SCRL_RIGHT SCROLL_HOR(MOUSE_SCRF_MAX)
 #define DEF 0
 #define LWR 1
 #define RSE 2
 #define ADJ 3
 
 &lt { quick_tap_ms = <200>; };
-
 &mt { quick_tap_ms = <200>; };
 
-&mmv {
-    time-to-max-speed-ms = <1000>;
-    acceleration-exponent = <2>;
+/ {
+    chosen {
+        zmk,physical_layout = &dao_crkbd_layout;
+        // zmk,physical_layout = &dao_full_layout;
+    };
 };
 
-&mwh { acceleration-exponent = <0>; };
-
 / {
-    keymap {
-        compatible = "zmk,keymap";
+        keymap {
+                compatible = "zmk,keymap";
 
-        macos_layer {
-            bindings = <
-           &kp ESC    &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV    &kp C_PP   &kp C_NEXT       &kp C_VOL_DN   &kp C_MUTE  &kp C_VOL_UP  &kp MINUS  &kp EQUAL  &kp BSPC
-&kp LSHFT  &kp GRAVE  &kp Q         &kp W         &kp E         &kp R      &kp T            &kp Y          &kp U       &kp I         &kp O      &kp P      &kp LBKT       &mt RSHFT RBKT
-           &kp LCTRL  &kp A         &kp S         &kp D         &kp F      &kp G            &kp H          &kp J       &kp K         &kp L      &kp SEMI   &mt RCTRL SQT
-           &kp LALT   &kp Z         &kp X         &kp C         &kp V      &kp B            &kp N          &kp M       &kp COMMA     &kp DOT    &kp FSLH   &mt RALT BSLH
-                                                  &mt RWIN RET  &lt 2 TAB  &lt LWR SPACE    &lt LWR SPACE  &lt 2 TAB   &mt RWIN RET
-            >;
-        };
+                default_layer {
+                        display-name = "MAIN";
+                        bindings = <
+          &mt LGUI RBKT     &kp Q   &kp W   &kp E         &kp R             &kp T         &kp Y         &kp U            &kp I         &kp O     &kp P      &kp LBKT
+          &mt LCTRL GRAVE   &kp A   &kp S   &kp D         &kp F             &kp G         &kp H         &kp J            &kp K         &kp L     &kp SEMI   &mt RCTRL SQT
+          &mt LALT MINUS    &kp Z   &kp X   &kp C         &kp V             &kp B         &kp N         &kp M            &kp COMMA     &kp DOT   &kp FSLH   &mt RALT BSLH
+                                            &lt RSE TAB   &mt LSHFT SPACE   &lt LWR RET   &lt LWR ESC   &mt RSHFT BSPC   &lt RSE DEL
+                        >;
+                };
+                lower_layer {
+                        display-name = "SYM";
+                        bindings = <
+          &mt LGUI F1      &kp F2     &kp F3   &kp F4        &kp F5     &kp F6      &kp F7      &kp F8     &kp F9        &kp F10    &kp F11    &kp F12
+          &mt LCTRL PLUS   &kp EXCL   &kp AT   &kp HASH      &kp DLLR   &kp PRCNT   &kp CARET   &kp AMPS   &kp STAR      &kp LPAR   &kp RPAR   &mt RCTRL MINUS
+          &mt LALT EQUAL   &kp N1     &kp N2   &kp N3        &kp N4     &kp N5      &kp N6      &kp N7     &kp N8        &kp N9     &kp N0     &kp RALT
+                                               &lt ADJ TAB   &trans     &trans      &trans      &trans     &lt ADJ DEL
+                        >;
+                };
 
-        numbers_layer {
-            bindings = <
-        &kp DELETE     &trans  &kp MINUS  &kp EQUAL  &kp PLUS  &kp KP_DIVIDE    &kp RG(HOME)  &trans              &trans            &trans         &trans  &trans
-&trans  &trans         &trans  &kp N7     &kp N8     &kp N9    &kp STAR         &kp PG_UP     &kp HOME            &kp UP            &kp END        &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-        &kp LG(SPACE)  &trans  &kp N4     &kp N5     &kp N6    &kp KP_DOT       &kp PG_DN     &kp LEFT            &kp DOWN          &kp RIGHT      &trans  &kp RG(SPACE)
-        &trans         &trans  &kp N1     &kp N2     &kp N3    &kp N0           &kp RG(END)   &kp LC(LEFT_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans  &trans
-                                          &trans     &trans    &trans           &trans        &trans              &trans
-            >;
+                raise_layer {
+                        display-name = "NUM";
+                        bindings = <
+          &mt LGUI KP_NUM   &kp KP_SLASH      &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_MINUS   &kp C_VOL_UP   &kp HOME   &kp PSCRN   &kp PG_UP   &kp SLCK          &kp CLCK
+          &mt LCTRL EQUAL   &kp KP_MULTIPLY   &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_PLUS    &kp C_MUTE     &kp LEFT   &kp UP      &kp RIGHT   &kp INS           &mt RCTRL  K_APP
+          &kp LALT          &kp KP_N0         &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_DOT     &kp C_VOL_DN   &kp END    &kp DOWN    &kp PG_DN   &kp PAUSE_BREAK   &kp RALT
+                                                          &trans      &trans      &lt ADJ RET    &lt ADJ ESC    &trans     &trans
+                        >;
+                };
+                adjust_layer {
+                        display-name = "ADJ";
+                        bindings = <
+ &bootloader   &studio_unlock &none          &none          &none          &none          &none          &none          &none          &none          &studio_unlock &bootloader
+ &bt BT_CLR    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0   &bt BT_CLR
+ &sys_reset    &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &sys_reset
+                                             &trans         &none          &trans         &trans         &none          &trans
+                        >;
+                };
         };
-
-        mouse_layer {
-            bindings = <
-        &kp F1      &kp F2  &kp F3          &kp F4          &kp F5           &kp F6       &kp F7     &kp F8       &kp F9       &kp F10       &kp F11  &kp F12
-&trans  &trans      &trans  &mkp RCLK       &mwh SCRL_UP    &mkp LCLK        &trans       &trans     &mkp LCLK    &mmv S_UP    &mkp RCLK     &trans   &trans      &trans
-        &trans      &trans  &mwh SCRL_LEFT  &mwh SCRL_DOWN  &mwh SCRL_RIGHT  &trans       &trans     &mmv S_LEFT  &mmv S_DOWN  &mmv S_RIGHT  &trans   &trans
-        &lt 3 LALT  &trans  &trans          &trans          &trans           &trans       &trans     &trans       &trans       &trans        &trans   &lt 3 RALT
-                                            &trans          &trans           &kp SPACE    &kp SPACE  &trans       &trans
-            >;
-        };
-
-        bluetooth_layer {
-            bindings = <
-        &none        &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &none
-&reset  &bootloader  &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &bootloader  &reset
-        &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-        &none        &none         &none         &none         &none         &trans          &trans        &none         &none         &none         &none         &none
-                                                 &none         &none         &trans          &trans        &none         &none
-            >;
-        };
-    };
 };
